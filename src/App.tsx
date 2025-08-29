@@ -49,10 +49,9 @@ function App() {
           onChange={onChange}
           onKeyDown={onAddTodo}
         />
-        
         <ItemsList data={todo} />
         <ControllerTab>
-          {activeKey === "completed" ? <p>{completed} items done</p> : <p>{notCompleted} items left</p>}
+          {activeKey === "completed" ? <p>{completed} items done</p> : <p>{(notCompleted) ? notCompleted : "No"} items left</p>}
           <ButtonUI
             type="all"
             activeKey={activeKey}
